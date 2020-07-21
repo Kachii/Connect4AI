@@ -5,5 +5,11 @@ class Player(object):
     def __eq__(self,other):
         return self.values == other.values 
     
-    def whatbool(self):
+    def whichPlayer(self):
         return self.values
+
+    def getValidMoves(self, board):
+        return []
+    
+    def makeMove(self, board, col):
+        return 
