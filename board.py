@@ -5,19 +5,35 @@ class Board(object):
     def __eq__(self,other):
         return self.values == other.values 
 
-    def boardFull(self):
-        for (x,y) in self.values:
+    """
+    these methods are to going to be used to check if the game is over
+    """
+    @staticmethod:
+    def boardFull(bd):
+        for (x,y) in bd:
             if (not x) return False
         return True
     
-    def gameWinner(self):
-        for i in range(len(self.values)):
-            for j in range(len(self.values[0])):
-                (piece,player) = self.values[i][j]
+    @staticmethod 
+    def gameWinner(bd):
+        for i in range(len(bd)):
+            for j in range(len(bd[0])):
+                (piece,player) = bd[i][j]
                 if(gameWinnerHelper(i,j,piece,player)) return (True,player)
         return None
+
     @staticmethod
     def gameWinnerHelper(xstart,ystart,piece,player):
-        
+        return None
+    @staticmethod 
+    def gameWinnerHelperDirection(xstart,ystart,piece,player,xdir,ydir):
+        return None 
+
+    def gameOver(self):
+        if(boardFull(self.values)):
+            return (False,False)
+        else:
+            return gameWinner(self.values)
+
 
 
