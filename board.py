@@ -31,7 +31,7 @@ class Board(object):
 
     def gameOver(self):
         if(boardFull(self.values)):
-            return (False,False)
+            return None 
         else:
             return gameWinner(self.values)
 
