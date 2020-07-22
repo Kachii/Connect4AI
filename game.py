@@ -1,10 +1,9 @@
 from board import *
-from player import *
+from ai, human import *
 
 gameboard = Board()
-human = Player(False)
-AI = Player(True)
-
+human = Human()
+AI = AI()
 
 while(gameboard.gameWinner() == None):
     print("TODO")
