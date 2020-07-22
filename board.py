@@ -7,9 +7,6 @@ class Board(object):
     def __eq__(self,other):
         return self.values == other.values 
 
-    """
-    these methods are to going to be used to check if the game is over
-    """
     @staticmethod:
     def boardFull(bd):
         for L in bd:
@@ -22,8 +19,10 @@ class Board(object):
         for xstart in range(len(bd)):
             for ystart in range(len(bd[0])):
                 (piece,player) = bd[xstart][ystart]
+                if not(piece) continue
                 if(gameWinnerHelper(xstart,ystart,piece,player)!= None) return (True,player)
-        return None
+        if boardFull(bd) return (False,False)
+        else return None 
 
     @staticmethod
     def gameWinnerHelper(xstart,ystart,piece,player):
