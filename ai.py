@@ -7,4 +7,5 @@ class AI(Player):
     def __eq__(self,other):
         return self.player == other.player
 
-    
+    def makeMove(self, board, col):
+        return 0
