@@ -2,16 +2,17 @@ from board import *
 from ai import *
 from human import *
 
-gameboard = Board()
+
 human = Human()
 AI = AI()
+gameboard = Board()
 
 currPlayer = human
-while(gameboard.gameWinner() == None):
+while(gameboard.gameOver() == None):
     if (type(currPlayer is Human)):
         print("It is the Human's turn.\n")
     
-        gameboard.printBoard()
+        #gameboard.printBoard()
         currPlayer.getValidMoves()
     
         col = input("Please choose a column: ")
@@ -19,15 +20,17 @@ while(gameboard.gameWinner() == None):
         currPlayer = AI
     
     else :
+        #gameboard.printBoard()
         currPlayer.makeMove
         currPlayer = human
 
-(x, y) = gameboard.gameWinner()
+#gameboard.printBoard()
+(x, y) = gameboard.gameOver()
 if (x & y):
-    print("AI wins")
+    print("AI wins!")
 elif (x):
-    print("Human wins")
+    print("Human wins!")
 else: 
-    print("Draw")    
+    print("Draw!")    
 
 print("Works!")

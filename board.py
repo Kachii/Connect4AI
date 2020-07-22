@@ -42,9 +42,5 @@ class Board(object):
 
     def gameOver(self):
         return gameWinner(self.values)
-         
-<<<<<<< HEAD
 
-
-board = Board()
 
