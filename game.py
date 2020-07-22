@@ -1,5 +1,6 @@
 from board import *
-from ai, human import *
+from ai import *
+from human import *
 
 gameboard = Board()
 human = Human()
@@ -18,5 +19,4 @@ else:
     print("Draw")    
 
 print("Works!")
-print(human.whichPlayer())
-print(AI.whichPlayer())
+
