@@ -12,12 +12,3 @@ class Player(object):
             if (not x):
                 moves.append(i)
         return moves
-    
-    def makeMove(self, board, col):
-        for i in range(len(board[i][col])):
-            (x, _) = board[i][col]
-            if (x):
-                board[i][col] = (True, self.values)
-                return
-        
-        

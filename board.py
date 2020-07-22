@@ -43,8 +43,14 @@ class Board(object):
     def gameOver(self):
         return gameWinner(self.values)
          
+<<<<<<< HEAD
 
 
 board = Board()
 
+=======
+    def printBoard(self):
+        return
+    
+>>>>>>> 3702e1c1b293e8bd3a09e744e2323d3284c44248
 
