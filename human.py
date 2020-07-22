@@ -1,6 +1,6 @@
-from player import *
+from player import * 
 
-class Human(object):
+class Human(Player):
     def __init__(self):
         self.player = Player(False)
 
