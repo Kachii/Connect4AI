@@ -5,6 +5,9 @@ class Board(object):
     def __eq__(self,other):
         return self.values == other.values 
     
+    def __repr__(self):
+        return 
+    
     @staticmethod 
     def gameWinner(bd):
         for xstart in range(len(bd)):
@@ -35,22 +38,22 @@ class Board(object):
 
     @staticmethod
     def boardFull(bd):
-        for L in bd:
-            for (x,y) in L:
-                if (not x): return False
+        L = bd[0]
+        for (piece,player) in L:
+                if (not piece): return False
         return True
 
     def gameOver(self):
         return gameWinner(self.values)
-         
-<<<<<<< HEAD
 
+    def getValidMoves(self): 
+        moves = []
+        for i in range(len(self.values[0])):
+            (piece,player) = self.values[0][i]
+            if not(piece): moves.append(i)
+        return moves
 
 board = Board()
 
-=======
-    def printBoard(self):
-        return
-    
->>>>>>> 3702e1c1b293e8bd3a09e744e2323d3284c44248
+
 

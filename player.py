@@ -7,7 +7,7 @@ class Player(object):
     
 
     def getValidMoves(self, board):
-        return []
+        return board.getValidMoves()
     
     def makeMove(self, board, col):
         return 
