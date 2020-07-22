@@ -9,3 +9,9 @@ class AI(Player):
 
     def makeMove(self, board, col):
         return 0
+
+    def minimax(self, board):
+        return 0
+    
+    def alphabeta(self, board):
+        return 0
