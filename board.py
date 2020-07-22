@@ -4,10 +4,7 @@ class Board(object):
     
     def __eq__(self,other):
         return self.values == other.values 
-    
-    def __repr__(self):
-        return 
-    
+  
     @staticmethod 
     def gameWinner(bd):
         for xstart in range(len(bd)):
