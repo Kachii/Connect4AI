@@ -17,13 +17,14 @@ while(gameboard.gameOver() == None):
         
         while True:
             try: 
-                col = input("Please choose a column: ")
+                col = int(input("Please choose a column: "))
                 moves.index(col)
                 break
             except ValueError:
                 print ("Not a valid move, try again.")
 
         currPlayer.makeMove(gameboard, col)
+        print(gameboard)
         currPlayer = AI
     
     else :

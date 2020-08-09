@@ -1,4 +1,5 @@
 from player import * 
+from board import *
 
 class Human(Player):
     def __init__(self):
@@ -10,8 +11,19 @@ class Human(Player):
 
     def makeMove(self, board, col):
 
-        for i in range(len(board[i][col])):
-            (x, _) = board[i][col]
+        for i in range(len(board.values)):
+            (x, _) = board.values[i][col]
             if (not(x)):
-                board[i][col] = (True, False)
+                board.values[i][col] = (True, False)
+                print(board.values)
+            return
+        return
  
+board = Board()
+human = Human()
+
+print(board)
+human.makeMove(board, 0)
+print(board)
+
+

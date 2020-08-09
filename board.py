@@ -47,7 +47,7 @@ class Board(object):
     @staticmethod
     def boardFull(bd):
         L = bd[0]
-        for (piece,player) in L:
+        for (piece, _) in L:
                 if (not piece): return False
         return True
 
@@ -57,8 +57,8 @@ class Board(object):
     def getValidMoves(self): 
         moves = []
         for i in range(len(self.values[0])):
-            (piece,player) = self.values[0][i]
-            if not(piece): moves.append(i)
+            (piece, _) = self.values[0][i]
+            if (not(piece)): moves.append(i)
         return moves
 
 board = Board()
