@@ -1,4 +1,5 @@
 from player import * 
+from board import *
 
 class Human(Player):
     def __init__(self):
