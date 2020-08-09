@@ -15,7 +15,7 @@ class Human(Player):
                 board.values[i][col] = (True, False)
                 break
 
-
+'''
 board = Board()
 hum = Human() 
 
@@ -27,3 +27,4 @@ hum.makeMove(board,3)
 hum.makeMove(board,3)
 hum.makeMove(board,5)
 print(board)
+'''
