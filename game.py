@@ -14,7 +14,7 @@ while(gameboard.gameOver() == None):
     
         #gameboard.printBoard()
         moves = gameboard.getValidMoves()
-        
+        print(moves)
         while True:
             try: 
                 col = int(input("Please choose a column: "))
