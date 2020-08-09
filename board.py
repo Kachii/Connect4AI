@@ -22,15 +22,15 @@ class Board(object):
             for ystart in range(len(bd[0])):
                 (piece,player) = bd[xstart][ystart]
                 if not(piece): continue
-                if(gameWinnerHelper(xstart,ystart,piece,player)!= None): return (True,player)
-        if boardFull(bd): return (False,False)
+                if(Board.gameWinnerHelper(xstart,ystart,piece,player)!= None): return (True,player)
+        if Board.boardFull(bd): return (False,False)
         else: return None 
 
     @staticmethod
     def gameWinnerHelper(xstart,ystart,piece,player):
         for xdir in [-1,0,1]:
             for ydir in [-1,0,1]:
-                if(gameWinnerHelperDirection(xstart,ystart,piece,player,xdir,ydir) != None): return (True,player)
+                if(Board.gameWinnerHelperDirection(xstart,ystart,piece,player,xdir,ydir) != None): return (True,player)
         return None 
 
     @staticmethod 
@@ -52,7 +52,7 @@ class Board(object):
         return True
 
     def gameOver(self):
-        return gameWinner(self.values)
+        return Board.gameWinner(self.values)
 
     def getValidMoves(self): 
         moves = []
@@ -62,7 +62,6 @@ class Board(object):
         return moves
 
 board = Board()
-print(board.values)
 print(board)
 
 

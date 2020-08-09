@@ -13,7 +13,7 @@ while(gameboard.gameOver() == None):
         print("It is the Human's turn.\n")
     
         #gameboard.printBoard()
-        moves = currPlayer.getValidMoves()
+        moves = gameboard.getValidMoves()
         
         while True:
             try: 
