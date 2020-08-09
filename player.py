@@ -9,5 +9,5 @@ class Player(object):
     def getValidMoves(self, board):
         return board.getValidMoves()
     
-    def makeMove(self, board, col, moves):
+    def makeMove(self, board, col):
         return 
