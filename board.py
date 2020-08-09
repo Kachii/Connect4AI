@@ -62,7 +62,5 @@ class Board(object):
             if (not(piece)): moves.append(i)
         return moves
 
-board = Board()
-print(board)
 
 
