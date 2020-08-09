@@ -10,13 +10,21 @@ class Human(Player):
     
 
     def makeMove(self, board, col):
-
-        for i in range(len(board.values)):
-            print("row number",i)
+        for i in range(len(board.values)-1,-1,-1):
             (x, _) = board.values[i][col]
             if (not(x)):
                 board.values[i][col] = (True, False)
-            break
+                break
 
 
+board = Board()
+hum = Human() 
 
+hum.makeMove(board,2)
+print(board)
+hum.makeMove(board,3)
+hum.makeMove(board,3)
+hum.makeMove(board,3)
+hum.makeMove(board,3)
+hum.makeMove(board,5)
+print(board)
