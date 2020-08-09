@@ -31,7 +31,7 @@ class Board(object):
             for ystart in range(len(bd[0])):
                 (piece,player) = bd[xstart][ystart]
                 if not(piece): continue
-                if(Board.gameWinnerHelper(xstart,ystart,piece,player)!= None): return (True,player)
+                if(Board.gameWinnerHelper(bd,xstart,ystart,piece,player)!= None): return (True,player)
         if Board.boardFull(bd): return (False,False)
         else: return None 
 
@@ -39,7 +39,7 @@ class Board(object):
     def gameWinnerHelper(bd,xstart,ystart,piece,player):
         for xdir in [-1,0,1]:
             for ydir in [-1,0,1]:
-                if(Board.gameWinnerHelperDirection(xstart,ystart,piece,player,xdir,ydir) != None): return (True,player)
+                if(Board.gameWinnerHelperDirection(bd,xstart,ystart,piece,player,xdir,ydir) != None): return (True,player)
         return None 
 
     @staticmethod 
