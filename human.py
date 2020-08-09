@@ -10,6 +10,7 @@ class Human(Player):
 
     def makeMove(self, board, col):
         for i in range(len(board.values)):
+            print("row number",i)
             (x, _) = board.values[i][col]
             if (not(x)):
                 board.values[i][col] = (True, False)
