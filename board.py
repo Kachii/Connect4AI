@@ -1,9 +1,9 @@
 class Board(object): 
     def __init__(self):
         LL = []
-        for i in range(6):
+        for _ in range(6):
             L = []
-            for j in range(7):
+            for _ in range(7):
                 L.append((False,False))
             LL.append(L)
         self.values = LL
