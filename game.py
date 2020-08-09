@@ -26,7 +26,7 @@ while(gameboard.gameOver() == None):
 
         currPlayer.makeMove(gameboard, col)
         print(gameboard)
-        currPlayer = AI
+        #currPlayer = AI
     
     else :
         #gameboard.printBoard()
