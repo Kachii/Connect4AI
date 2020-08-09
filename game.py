@@ -1,13 +1,14 @@
-from board import *
-from ai import *
-from human import *
+from board import Board
+from ai import AI
+from human import Human
 
 
 human = Human()
 AI = AI()
 gameboard = Board()
-
 currPlayer = human
+print(gameboard)
+
 while(gameboard.gameOver() == None):
     if (type(currPlayer is Human)):
         print("It is the Human's turn.\n")
