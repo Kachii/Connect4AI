@@ -4,7 +4,18 @@ class Board(object):
     
     def __eq__(self,other):
         return self.values == other.values 
-  
+
+    def __repr__(self):
+        st = ""
+        for L in self.values:
+            for (x,y) in L:
+                if x:
+                    if(y): st += "X "
+                    else: st += "O "
+                else: st+= "- "
+            st += "\n"
+        return st
+
     @staticmethod 
     def gameWinner(bd):
         for xstart in range(len(bd)):
@@ -51,6 +62,7 @@ class Board(object):
         return moves
 
 board = Board()
-
+print(board.values)
+print(board)
 
 
