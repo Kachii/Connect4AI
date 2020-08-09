@@ -15,16 +15,16 @@ class Human(Player):
                 board.values[i][col] = (True, False)
                 break
 
-'''
+
 board = Board()
 hum = Human() 
 
 hum.makeMove(board,2)
-print(board)
+hum.makeMove(board,3)
+print(board.gameOver())
 hum.makeMove(board,3)
 hum.makeMove(board,3)
 hum.makeMove(board,3)
-hum.makeMove(board,3)
+print(board.gameOver())
 hum.makeMove(board,5)
-print(board)
-'''
+
