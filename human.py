@@ -15,8 +15,12 @@ class Human(Player):
             print("row number",i)
             (x, _) = board.values[i][col]
             if (not(x)):
-                board.values[i][col] = (True, False)
+                board.values[len(board.values)-1-i][col] = (True, False)
             break
 
 
+board = Board()
+hum = Human() 
 
+hum.makeMove(board,2)
+print(board)
