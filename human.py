@@ -12,18 +12,11 @@ class Human(Player):
     def makeMove(self, board, col):
 
         for i in range(len(board.values)):
+            print("row number",i)
             (x, _) = board.values[i][col]
             if (not(x)):
                 board.values[i][col] = (True, False)
-                print(board.values)
-            return
-        return
- 
-board = Board()
-human = Human()
+            break
 
-print(board)
-human.makeMove(board, 0)
-print(board)
 
 

@@ -1,6 +1,14 @@
 class Board(object): 
     def __init__(self):
-        self.values = [[(False,False)]*7]*6
+        LL = []
+        for i in range(6):
+            L = []
+            for j in range(7):
+                L.append((False,False))
+            LL.append(L)
+        self.values = LL
+
+             
     
     def __eq__(self,other):
         return self.values == other.values 
@@ -16,7 +24,7 @@ class Board(object):
             st += "\n"
         return st
 
-    
+
     @staticmethod 
     def gameWinner(bd):
         for xstart in range(len(bd)):
@@ -61,8 +69,3 @@ class Board(object):
             (piece, _) = self.values[0][i]
             if (not(piece)): moves.append(i)
         return moves
-
-board = Board()
-print(board)
-
-
