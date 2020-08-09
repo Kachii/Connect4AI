@@ -13,15 +13,22 @@ while(gameboard.gameOver() == None):
         print("It is the Human's turn.\n")
     
         #gameboard.printBoard()
-        currPlayer.getValidMoves()
-    
-        col = input("Please choose a column: ")
+        moves = currPlayer.getValidMoves()
+        
+        while True:
+            try: 
+                col = input("Please choose a column: ")
+                moves.index(col)
+                break
+            except ValueError:
+                print ("Not a valid move, try again.")
 
+        currPlayer.makeMove(gameboard, col)
         currPlayer = AI
     
     else :
         #gameboard.printBoard()
-        currPlayer.makeMove
+        #currPlayer.makeMove
         currPlayer = human
 
 #gameboard.printBoard()

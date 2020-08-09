@@ -9,9 +9,9 @@ class Human(Player):
     
 
     def makeMove(self, board, col):
+
         for i in range(len(board[i][col])):
             (x, _) = board[i][col]
-            if (x):
+            if (not(x)):
                 board[i][col] = (True, False)
-                return
-        return 0    
+ 
