@@ -1,5 +1,4 @@
 from player import * 
-from board import *
 
 class Human(Player):
     def __init__(self):
@@ -7,7 +6,6 @@ class Human(Player):
 
     def __eq__(self,other):
         return self.player == other.player
-    
 
     def makeMove(self, board, col):
         for i in range(len(board.values)-1,-1,-1):

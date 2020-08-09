@@ -69,3 +69,6 @@ class Board(object):
             (piece, _) = self.values[0][i]
             if (not(piece)): moves.append(i)
         return moves
+
+
+
