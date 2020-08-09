@@ -1,5 +1,4 @@
 from player import * 
-from board import *
 
 class Human(Player):
     def __init__(self):
@@ -16,9 +15,3 @@ class Human(Player):
                 board.values[len(board.values)-1-i][col] = (True, False)
                 break
 
-
-board = Board()
-hum = Human() 
-
-hum.makeMove(board,2)
-print(board)
